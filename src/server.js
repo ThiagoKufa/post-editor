@@ -1,4 +1,5 @@
 import express from "express";
+
 import bodyParser from "body-parser";
 import path from "path";
 import { DataBase } from "./service/db.js";
@@ -58,6 +59,8 @@ app.post("/api/createArticle", (req, res) => {
 
   res.status(200).json({ message: "update ok" });
 });
+
+app.use("/.netlify/function/api", router);
 
 export const startSever = () => {
   app.listen(PORT, () => console.log("Server is running"));
