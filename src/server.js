@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import path from "path";
-import { DataBase } from "../service/db.js";
+import { DataBase } from "./service/db.js";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
