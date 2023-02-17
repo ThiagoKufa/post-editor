@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Source+Serif+Pro:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <span class="breadcrumbs">
+        <img src="public/folder.svg" alt="ícone de pasta" />
+        Site / Categoria
+      </span>
+      <div class="container">
+        <div class="titleContainer"></div>
+        <div class="content"></div>
+        <div class="btnContainer">
+          <button class="addElementBtn">
+            Clique para adicionar um novo elemento
+          </button>
+          <div class="dropdownMenu">
+            <p>Text</p>
+            <button class="btnParagraph">
+              <img class="icon" src="public/text.svg" alt="ícone de texto" />
+              <div class="dropdownMenu__textBtn">
+                <h3>Parágrafo</h3>
+                <p>Adicione um parágrafo ao texto</p>
+              </div>
+            </button>
+            <hr />
+            <p>Basic</p>
+            <button class="btnImg">
+              <img class="icon" src="public/image.svg" alt="ícone de texto" />
+              <div class="dropdownMenu__textBtn">
+                <h3>Imagem</h3>
+                <p>Enviar uma imagem</p>
+              </div>
+            </button>
+            <button class="btnLine">
+              <span class="material-symbols-outlined icon"> power_input </span>
+              <div class="dropdownMenu__textBtn">
+                <h3>Separador</h3>
+                <p>Criar uma linha</p>
+              </div>
+            </button>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/scripts/render-itens.js" type="module"></script>
+    <script src="/scripts/dropdown-menu.js" type="module"></script>
+    <script src="/scripts/drag-drop.js" type="module"></script>
+    <script src="/scripts/save-after-time.js" type="module"></script>
+  </body>
+</html>

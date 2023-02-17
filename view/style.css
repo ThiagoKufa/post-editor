@@ -1,0 +1,249 @@
+:root {
+  --hr-color: #bbbbbb;
+  --background-color: #fff;
+  --border-color: #e3e2e2;
+  --hover-color: #e3e2e2;
+  --selected-color: #67bdff;
+  --drop-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  --gray-color: #646464;
+  --sucess-color: #10b981;
+  --error-color: #b93210;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Fonts */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.content > p {
+  font-family: "Source Serif Pro", serif;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Separator */
+hr {
+  border: none;
+  border-top: 0.5px solid var(--hr-color);
+  background-color: var(--background-color);
+  padding: 5px 0;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--seccolorondary-);
+}
+.titleContainer > .title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 5px;
+  font-stretch: condensed;
+  font-weight: 600;
+}
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content > hr {
+  padding: 5px;
+  margin: 10px 0;
+  background-color: var(--background-color);
+  cursor: grab;
+}
+
+.content > p {
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 1em;
+  background-color: var(--background-color);
+  color: var(--gray-color);
+  cursor: grab;
+}
+
+.content > img {
+  padding: 5px;
+  margin: 10px 0;
+  max-width: 100%;
+  cursor: grab;
+}
+
+/* Button container */
+.btnContainer {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.addElementBtn {
+  margin: 0 auto;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  color: var(--hr-color);
+}
+
+.addElementBtn:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+
+/* Dropdown menu */
+.dropdownMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  border-radius: 6px;
+  background-color: var(--background-color);
+  box-shadow: var(--drop-shadow);
+  list-style: none;
+}
+
+.dropdownMenu > p {
+  color: #646464;
+  padding: 10px;
+}
+
+.dropdownMenu > button {
+  display: flex;
+  padding: 10px 50px 10px 10px;
+  border: none;
+  width: 100%;
+  gap: 10px;
+  background-color: var(--background-color);
+}
+
+.dropdownMenu > button:hover {
+  background-color: var(--hr-color);
+}
+
+.dropdownMenu > button > .icon {
+  border: 1px solid var(--hr-color);
+  padding: 6px;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  color: var(--sucess-color);
+}
+
+.dropdownMenu > button:hover > .icon {
+  background-color: var(--background-color);
+}
+
+.dropdownMenu > hr {
+  margin: 2px 0;
+}
+
+.dropdownMenu__textBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.dropdownMenu__textBtn > p {
+  color: var(--gray-color);
+}
+
+.selected {
+  border: 1px solid var(--selected-color);
+  border-radius: 6px;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.inputParagraph {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+.inputTitle {
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+.btnIcon {
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--hr-color);
+  padding: 6px;
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+}
+.btnEditContainer {
+  display: flex;
+  padding-top: 10px;
+  gap: 5px;
+  justify-content: flex-end;
+}
+.btnIcon:hover {
+  filter: brightness(0.5);
+}
+.containerLine {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.text-sucess {
+  color: var(--sucess-color);
+}
+.text-error {
+  color: var(--error-color);
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    min-width: 750px;
+  }
+  .container {
+    min-width: none;
+    max-width: 768px;
+  }
+}
